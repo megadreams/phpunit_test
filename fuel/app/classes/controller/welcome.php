@@ -27,21 +27,13 @@ class Controller_Welcome extends Controller
 
 	public function action_index2()
     {
-
-        $data = array(
-            'test' => array(
-                'test_1' => 100,
-                'test_2' => 200
-            )
-        ); 
-        foreach ($data['test'] as $key => $val) 
-        { 
-            if ($val === 100 || $val=== false) 
+        foreach ($display_vars['vars'] as $config_key => $vars) 
+        {
+            if (!is_array($vars) && strpos($config_key, 'legend') === false) 
             { 
                 continue; 
             }
-        } 
-        return Response::forge(View::forge('welcome/index'));
+        }
 	}
 
 	/**
