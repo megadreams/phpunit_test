@@ -20,16 +20,18 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
-        for ($i = 10; $i < 20; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $count += $i;
         }
+        echo $count;
 		return Response::forge(View::forge('welcome/index'));
 	}
 	public function action_index2()
     {
-        for ($i = 10; $i < 20; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $count += $i;
         }
+        echo $count;
 		return Response::forge(View::forge('welcome/index'));
 	}
 
