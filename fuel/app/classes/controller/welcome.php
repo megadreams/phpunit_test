@@ -27,12 +27,19 @@ class Controller_Welcome extends Controller
 
 	public function action_index2()
     {
-        foreach ($display_vars['vars'] as $config_key => $vars) 
-        {
-            if (!is_array($vars) && strpos($config_key, 'legend') === false) 
-            { 
-                continue; 
-            }
+        $i = 5;
+        if ($i === 1) {
+            echo $i;
+        } else if ($i === 2) {
+            echo $i;
+        } else if ($i === 3) {
+            echo $i;
+        } else if ($i === 4) {
+            echo $i;
+        } else if ($i === 5) {
+            echo $i;
+        } else if ($i === 6) {
+            echo $i;
         }
 	}
 
