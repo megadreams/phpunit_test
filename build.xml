@@ -16,7 +16,7 @@
         <!--
         <mkdir dir="${phpunit_dir_name}" />
          -->
-        <exec dir="." command="phpunit -c fuel/core/phpunit.xml --coverage-html phing/coverage/html --log-junit phing/junit.xml"/>
+        <exec dir="." command="phpunit -c fuel/core/phpunit.xml --coverage-html phing/coverage/html --coverage-clover phing/coverage/coverage.xml --log-junit phing/junit.xml"/>
     </target>
     
     
