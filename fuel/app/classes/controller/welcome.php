@@ -27,11 +27,21 @@ class Controller_Welcome extends Controller
 
 	public function action_index2()
     {
-        for ($i = 0; $i < 10; $i++) {
-            $count += $i;
-        }
-        echo $count;
-		return Response::forge(View::forge('welcome/index'));
+
+        $data = array(
+            'test' => array(
+                'test_1' => 100,
+                'test_2' => 200
+            )
+        ); 
+        foreach ($data['test'] as $key => $val) 
+        { 
+            if ($val === 100 || $val=== false) 
+            { 
+                continue; 
+            }
+        } 
+        return Response::forge(View::forge('welcome/index'));
 	}
 
 	/**
